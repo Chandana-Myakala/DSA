@@ -40,10 +40,10 @@ l=0
 r=len(a)-1
 while l<r:
     m=(l+r)//2
-    if (m==0 or a[m]>a[m-1] and  m==len(a) or a[m]>a[m+1] or a[m]>a[m+1]):
+    if (m==0 or a[m]>a[m-1] and  m==len(a) or a[m]>a[m+1]):
         print(a[m])
         break
-    if(a[m+1]>a[m]):
+    if(m<len(a)-1 and a[m+1]>a[m]):
         l=m+1
     else:
         r=m-1
